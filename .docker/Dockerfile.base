@@ -1,0 +1,15 @@
+FROM ubuntu:20.04
+LABEL Description="Base Build environment"
+
+ENV HOME /root
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ "America/Boise"
+
+SHELL [ "/bin/bash", "-c" ]
+
+RUN apt-get update 
+RUN apt-get install --yes build-essential
+RUN apt-get install --yes cmake
+RUN apt-get install --yes gdb
+RUN apt-get install --yes wget
+RUN apt-get install --yes git

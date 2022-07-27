@@ -1,0 +1,15 @@
+FROM tigerchanay/env:0.1
+LABEL Description="Base Build environment"
+
+ENV HOME /root
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ "America/Boise"
+
+SHELL [ "/bin/bash", "-c" ]
+
+RUN apt-get update
+
+RUN apt-get install --yes libpthread-stubs0-dev
+RUN apt-get install --yes gcc-9
+
+WORKDIR /src
