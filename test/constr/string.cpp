@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <constr/string.hpp>
+#include <constr/constr.hpp>
 
 TEST(String, Construct) {
 	constr::string str{"Hello World"};

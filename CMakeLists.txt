@@ -55,6 +55,7 @@ if (CONSTR_INCLUDE_HEADERS)
 		STATIC
 			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/config/macro.hpp>
 			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/config/version.hpp>
+			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/constr.hpp>
 			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/fwd.hpp>
 			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/string_algo.hpp>
 			$<BUILD_INTERFACE:${constr_SOURCE_DIR}/include/constr/string_fixed.hpp>
@@ -127,13 +128,6 @@ install(
 install(DIRECTORY src/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 export(PACKAGE constr)
-
-#
-# Compiler versions
-#
-message("[constr] ${CMAKE_CXX_COMPILER_ID}")
-message("[constr] ${CMAKE_CXX_COMPILER_VERSION}")
-message("[constr] ${CMAKE_CXX_STANDARD}")
 
 #
 # Tests
